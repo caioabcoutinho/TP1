@@ -1,3 +1,3 @@
-# TP1
+# Trabalho 1 TP1
 
-Códigos das aulas de Técnicas de Programação 1
+Primeiro trabalho de técnicas de programação 1
