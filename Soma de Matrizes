@@ -1,0 +1,50 @@
+#include <stdio.h>
+
+void lerMatriz(int matrizLeitura[][3])
+{
+    int i, j;
+
+    for(i=0; i<3; i++)
+    {
+        for(j=0; j<3; j++)
+        {
+            printf("[%d][%d] = ", i, j);
+            scanf("%d", &matrizLeitura[i][j]);
+        }
+    }
+}
+
+void somaMatrizes(int primeiraMatriz[][3], int segundaMatriz[][3], int terceiraMatriz[][3])
+{
+    int i, j;
+
+    for(i=0; i<3; i++)
+    {
+        for(j=0; j<3; j++)
+        {
+            terceiraMatriz[i][j] = primeiraMatriz[i][j] + segundaMatriz[i][j];
+        }
+    }
+    printf("\nSoma das matrizes:\n");
+
+    for(i=0; i<3; i++)
+    {
+        printf("\n");
+        for(j=0; j<3; j++)
+        {
+            printf("%d ", terceiraMatriz[i][j]);
+        }
+    }
+}
+
+int main()
+{
+    int primeiraMatriz[3][3], segundaMatriz[3][3], terceiraMatriz[3][3];
+
+    lerMatriz(primeiraMatriz);
+    lerMatriz(segundaMatriz);
+
+    somaMatrizes(primeiraMatriz, segundaMatriz, terceiraMatriz);
+
+    return 0;
+}
