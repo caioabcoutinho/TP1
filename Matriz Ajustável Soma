@@ -1,0 +1,47 @@
+#include <stdio.h>
+
+float somaMatriz(int linhas, int colunas, float matrizLegal[][colunas])
+{
+    int i, j;
+    float somaElementos = 0;
+
+    for(i=0; i < linhas; i++)
+    {
+        for(j=0; j < colunas; j++)
+        {
+            somaElementos += matrizLegal[i][j];
+        }
+    }
+
+    return somaElementos;
+}
+
+int main()
+{
+    int linhas, colunas, i, j;
+
+    printf("Digite a quantidade de linhas da matriz: ");
+    scanf("%d", &linhas);
+
+    printf("Digite a quantidade de colunas da matriz: ");
+    scanf("%d", &colunas);
+
+    float matrizLegal[linhas][colunas], somaElementos;
+
+    printf("Digite os elementos da matriz: \n");
+
+    for(i=0; i < linhas; i++)
+    {
+        for(j=0; j < colunas; j++)
+        {
+            scanf("%f", &matrizLegal[i][j]);
+        }
+    }
+
+    somaElementos = somaMatriz(linhas, colunas, matrizLegal);
+
+    printf("A soma dos elementos da matriz eh: %.2f", somaElementos);
+
+
+    return 0;
+}
